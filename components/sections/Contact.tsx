@@ -14,7 +14,7 @@ import { contactSchema } from '@/lib/schema/contact'
 const PROJECT_TYPES = ['Landing Page', 'E-commerce', 'Business Website', 'Redesign', 'Other']
 
 const CONTACT_LINKS = [
-  { href: 'tel:+233557618757',                label: 'Phone',  value: '055 761 8757',               Icon: IconPhone,  external: false },
+  { href: 'https://wa.me/233557618757?text=Hi%20Daniel%2C%20I%20found%20you%20through%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.', label: 'WhatsApp', value: '055 761 8757', Icon: IconPhone, external: true },
   { href: 'mailto:danielsackitey10@gmail.com', label: 'Email',  value: 'danielsackitey10@gmail.com', Icon: IconMail,   external: false },
   { href: 'https://github.com/Daniel213121',   label: 'GitHub', value: '@Daniel213121',              Icon: IconGithub, external: true  },
 ]
