@@ -8,13 +8,15 @@ import {
   IconArrowRight, IconArrowUpRight,
   IconPhone, IconMail, IconGithub,
 } from '@/components/ui/Icons'
+import { toast } from 'sonner'
+import { contactSchema } from '@/lib/schema/contact'
 
 const PROJECT_TYPES = ['Landing Page', 'E-commerce', 'Business Website', 'Redesign', 'Other']
 
 const CONTACT_LINKS = [
-  { href: 'tel:+233557618757',                    label: 'Phone',  value: '055 761 8757',             Icon: IconPhone,  external: false },
-  { href: 'mailto:danielsackitey10@gmail.com',     label: 'Email',  value: 'danielsackitey10@gmail.com', Icon: IconMail,   external: false },
-  { href: 'https://github.com/Daniel213121',       label: 'GitHub', value: '@Daniel213121',            Icon: IconGithub, external: true  },
+  { href: 'tel:+233557618757',                label: 'Phone',  value: '055 761 8757',               Icon: IconPhone,  external: false },
+  { href: 'mailto:danielsackitey10@gmail.com', label: 'Email',  value: 'danielsackitey10@gmail.com', Icon: IconMail,   external: false },
+  { href: 'https://github.com/Daniel213121',   label: 'GitHub', value: '@Daniel213121',              Icon: IconGithub, external: true  },
 ]
 
 /* ── Field ─────────────────────────────────────────────────────────── */
@@ -59,10 +61,12 @@ function Spinner() {
 
 /* ── Contact (main export) ─────────────────────────────────────────── */
 
+const EMPTY_FORM = { name: '', email: '', type: '', message: '' }
+
 export function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', type: '', message: '' })
+  const [form, setForm]     = useState(EMPTY_FORM)
   const [errors, setErrors] = useState<Record<string, string | undefined>>({})
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   const update =
     (k: keyof typeof form): React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> =>
@@ -71,31 +75,41 @@ export function Contact() {
       setErrors((prev) => ({ ...prev, [k]: undefined }))
     }
 
-  const validate = () => {
-    const errs: Record<string, string> = {}
-    if (!form.name.trim())
-      errs.name = 'Name is required'
-    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      errs.email = 'Valid email is required'
-    if (!form.type)
-      errs.type = 'Please select a project type'
-    if (form.message.trim().length < 10)
-      errs.message = 'Message must be at least 10 characters'
+  const validate = (): boolean => {
+    const result = contactSchema.safeParse(form)
+    if (result.success) { setErrors({}); return true }
+    const errs: Record<string, string | undefined> = {}
+    for (const issue of result.error.issues) {
+      const key = issue.path[0] as string
+      if (key && !errs[key]) errs[key] = issue.message
+    }
     setErrors(errs)
-    return Object.keys(errs).length === 0
+    return false
   }
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!validate()) return
+
     setStatus('sending')
-    setTimeout(() => {
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      if (!res.ok) throw new Error('Send failed')
+
       setStatus('sent')
-      setTimeout(() => {
-        setStatus('idle')
-        setForm({ name: '', email: '', type: '', message: '' })
-      }, 3200)
-    }, 1100)
+      setForm(EMPTY_FORM)
+      toast.success("Message sent — I'll be in touch soon!")
+      setTimeout(() => setStatus('idle'), 4000)
+    } catch {
+      setStatus('error')
+      toast.error('Something went wrong. Please try again.')
+      setTimeout(() => setStatus('idle'), 4000)
+    }
   }
 
   return (
@@ -253,20 +267,18 @@ export function Contact() {
                     </button>
                   )}
                   {status === 'sending' && (
-                    <button
-                      disabled
-                      className="inline-flex items-center gap-2 rounded-full bg-burnt/70 px-5 py-3 text-[14px] font-semibold text-white cursor-not-allowed shrink-0"
-                    >
-                      <Spinner />
-                      Sending…
+                    <button disabled className="inline-flex items-center gap-2 rounded-full bg-burnt/70 px-5 py-3 text-[14px] font-semibold text-white cursor-not-allowed shrink-0">
+                      <Spinner /> Sending…
                     </button>
                   )}
                   {status === 'sent' && (
-                    <button
-                      disabled
-                      className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-[14px] font-semibold text-white/80 shrink-0"
-                    >
-                      ✓ Sent — thank you
+                    <button disabled className="inline-flex items-center gap-2 rounded-full bg-[#5DC264]/20 border border-[#5DC264]/40 px-5 py-3 text-[14px] font-semibold text-[#5DC264] shrink-0">
+                      ✓ Sent — I'll be in touch soon
+                    </button>
+                  )}
+                  {status === 'error' && (
+                    <button disabled className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-[14px] font-semibold text-white/60 shrink-0">
+                      ✕ Something went wrong — try again
                     </button>
                   )}
                 </div>

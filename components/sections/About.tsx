@@ -70,7 +70,7 @@ function Timeline() {
   return (
     <ol className="relative border-l border-line pl-8 space-y-9">
       {TIMELINE.map((t) => (
-        <TimelineItem key={t.year} item={t} />
+        <TimelineItem key={t.title} item={t} />
       ))}
     </ol>
   )

@@ -135,8 +135,8 @@ function CodeWindow() {
 
 function TechMarquee() {
   const items = [
-    'Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Node.js', 'PostgreSQL',
-    'Prisma', 'Framer Motion', 'Vercel', 'Supabase', 'Stripe', 'Resend', 'tRPC', 'shadcn/ui',
+    'Next.js', 'TypeScript', 'neon', 'Tailwind CSS', 'Prisma', 'Clerk', 'recharts', 'OpenAI',
+    'Prisma', 'sonner', 'zustand', 'bcryptjs', 'imagekit', 'next-auth', 'zod', 'Framer Motion', 'clsx', 'uuid', 'jsonwebtoken', 'Vercel', 'Supabase', 'Stripe', 'Resend', 'tRPC', 'shadcn/ui',
   ]
 
   return (

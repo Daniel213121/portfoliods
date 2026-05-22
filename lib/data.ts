@@ -6,7 +6,7 @@ export type Project = {
   domain: string;
   description: string;
   tags: string[];
-  thumbKind: 'opal' | 'kurom' | 'mina' | 'motexiz' | 'tourghana' | 'chezkeke';
+  thumbKind: 'opal' | 'kurom' | 'mina' | 'motexiz' | 'tourghana' | 'chezkeke' | 'solvedpasco';
 };
 
 export const PROJECTS: Project[] = [
@@ -70,6 +70,16 @@ export const PROJECTS: Project[] = [
     tags: ['Next.js', 'TypeScript', 'POS System', 'Real-time', 'Client Work'],
     thumbKind: 'chezkeke',
   },
+  {
+    num: '07',
+    name: 'SolvedPasco',
+    featured: false,
+    url: 'https://solvedpasco.com',
+    domain: 'solvedpasco.com',
+    description: 'E-learning platform for Ghanaian students with 1,000+ solved BECE and WASSCE past questions, aggregate calculators, school selection helpers, and tiered membership subscriptions.',
+    tags: ['Next.js', 'TypeScript', 'EdTech', 'SaaS', 'Client Work'],
+    thumbKind: 'solvedpasco',
+  },
 ];
 
 export type Service = {
@@ -95,8 +105,8 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-  { value: '5+',    label: 'Projects Shipped'  },
-  { value: '3+',    label: 'Industries Served' },
+  { value: '7+',    label: 'Projects Shipped'  },
+  { value: '5+',    label: 'Industries Served' },
   { value: '100%',  label: 'Built to Convert'  },
   { value: 'GH 🇬🇭', label: 'Based in Accra'  },
 ];
@@ -119,17 +129,45 @@ export const TIMELINE = [
     chip: 'Launched',
   },
   {
-    year: '2025',
+    year: '2026',
     title: 'Opal Edge Wellness',
     sub: 'Featured',
     body: '240-product international skincare store with full customer portal and admin.',
     chip: 'Production',
   },
   {
-    year: '2024',
+    year: '2026',
+    title: 'Chez Keke POS',
+    sub: 'Shipped',
+    body: 'Restaurant POS for an Ivorian–Ghanaian kitchen with live ticket dashboard and WiFi-gated ordering.',
+    chip: 'Launched',
+  },
+  {
+    year: '2026',
+    title: 'Motexiz',
+    sub: 'Shipped',
+    body: 'Car rental platform with premium fleet listings, free delivery, and GHS450/day starting price.',
+    chip: 'Launched',
+  },
+  {
+    year: '2025',
     title: 'Kurom',
     sub: 'Shipped',
     body: 'Gadget e-commerce with subscription pricing and newsletter automations.',
+    chip: 'Launched',
+  },
+  {
+    year: '2025',
+    title: 'Tour Ghana',
+    sub: 'Shipped',
+    body: 'Tourism platform showcasing Ghana\'s destinations across six tour categories with package booking.',
+    chip: 'Launched',
+  },
+  {
+    year: '2023',
+    title: 'SolvedPasco',
+    sub: 'Shipped',
+    body: 'E-learning platform with 1,000+ solved BECE and WASSCE past questions and tiered memberships.',
     chip: 'Launched',
   },
   {
