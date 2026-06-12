@@ -93,7 +93,7 @@ function CodeWindow() {
             <span className="text-[#C24A0F]">const</span>{' developer = {'}
           </CodeLine>
           <CodeLine n={3} indent={1}>
-            {'name: '}<span className="text-[#5DC264]">'Daniel Sackitey'</span>,
+            {'name: '}<span className="text-[#5DC264]">'Daniel'</span>,
           </CodeLine>
           <CodeLine n={4} indent={1}>
             {'role: '}<span className="text-[#5DC264]">'Full-Stack Developer'</span>,

@@ -241,7 +241,7 @@ function MinaMock() {
 
   return (
     <div className="aspect-[4/3] bg-white flex flex-col overflow-hidden">
-      <BrowserChrome url="minashauss.vercel.app" />
+      <BrowserChrome url="minashauss.com" />
 
       {/* Nav */}
       <div className="flex items-center justify-between px-4 py-2 flex-shrink-0" style={{ background: navBg }}>

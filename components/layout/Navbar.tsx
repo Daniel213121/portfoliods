@@ -37,7 +37,7 @@ export function Navbar() {
           onClick={handleNav('top')}
           className="text-[15px] md:text-[16px] font-bold tracking-tight text-ink"
         >
-          Daniel Sackitey<span className="text-burnt">.</span>
+          Daniel<span className="text-burnt">.</span>
         </a>
 
         {/* Desktop nav */}

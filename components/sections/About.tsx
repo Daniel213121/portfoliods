@@ -129,7 +129,7 @@ export function About() {
                       <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-[#5DC264] ring-2 ring-white" />
                     </div>
                     <div>
-                      <div className="text-[14px] font-semibold text-ink">Daniel Sackitey</div>
+                      <div className="text-[14px] font-semibold text-ink">Daniel</div>
                       <div className="text-[12px] text-body">Founder, Prime Tech Support</div>
                     </div>
                   </div>

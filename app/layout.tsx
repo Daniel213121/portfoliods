@@ -4,11 +4,11 @@ import { Toaster } from 'sonner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Daniel Sackitey — Full-Stack Developer',
+  title: 'Daniel  — Full-Stack Developer',
   description:
     'Full-stack developer and founder of Prime Tech Support, building fast, conversion-driven web products from Accra, Ghana.',
   openGraph: {
-    title: 'Daniel Sackitey — Full-Stack Developer',
+    title: 'Daniel  — Full-Stack Developer',
     description: 'Fast, modern web products for businesses and startups.',
     locale: 'en_US',
     type: 'website',
