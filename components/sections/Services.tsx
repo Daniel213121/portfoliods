@@ -178,7 +178,7 @@ export function Services({ horizontal = false }: { horizontal?: boolean }) {
       <div className={`mx-auto ${horizontal ? '' : 'max-w-[1280px]'} px-6 md:px-10 lg:px-14 py-24 md:py-32`}>
         <div className={horizontal ? 'max-w-[1280px] mx-auto' : ''}>
           <Reveal>
-            <SectionLabel>What I Build</SectionLabel>
+            <SectionLabel>What We Build</SectionLabel>
           </Reveal>
           <Reveal delay={80}>
             <div className="mt-4 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -203,7 +203,7 @@ export function Services({ horizontal = false }: { horizontal?: boolean }) {
               <div>
                 <p className="text-[14px] text-body">Not sure which one you need?</p>
                 <p className="mt-1 text-[18px] md:text-[22px] font-bold text-ink">
-                  Let's scope it together — first call is on me.
+                  Let's scope it together — first call is on us.
                 </p>
               </div>
               <a

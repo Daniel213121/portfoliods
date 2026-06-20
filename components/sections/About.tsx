@@ -86,7 +86,7 @@ export function About() {
         <Reveal><SectionLabel>About</SectionLabel></Reveal>
         <Reveal delay={80}>
           <h2 className="mt-4 text-[40px] sm:text-[52px] md:text-[68px] font-bold tracking-tightest text-ink leading-[1.02]">
-            <ScrollText text="A developer who ships." />
+            <ScrollText text="A founder who ships." />
           </h2>
         </Reveal>
 
@@ -101,17 +101,17 @@ export function About() {
                 <div className="relative">
                   <div className="absolute -left-3 top-1 bottom-1 w-px bg-burnt/60 hidden md:block" />
                   <p className="text-[16px] md:text-[17px] leading-[1.75] text-body">
-                    I'm a full-stack developer and the founder of{' '}
-                    <span className="text-ink font-semibold">Prime Tech Support</span>,
-                    a small studio in Accra building modern web products for
-                    businesses across Ghana and beyond.
+                    I'm Daniel, founder of{' '}
+                    <span className="text-ink font-semibold">Prime Tech Support</span>
+                    {' '}— a web development studio in Accra building modern
+                    web products for businesses across Ghana and beyond.
                   </p>
                 </div>
               </Reveal>
 
               <Reveal delay={80}>
                 <p className="text-[16px] md:text-[17px] leading-[1.75] text-body">
-                  My focus is simple: fast, accessible, conversion-driven websites.
+                  Our focus is simple: fast, accessible, conversion-driven websites.
                   I obsess over the details that turn a visitor into a customer —
                   the load time, the line of copy, the half-second that decides
                   if someone scrolls or leaves.

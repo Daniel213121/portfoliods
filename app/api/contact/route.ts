@@ -25,10 +25,10 @@ export async function POST(req: Request) {
       from: FROM,
       to: TO,
       replyTo: email,
-      subject: `[Portfolio] ${type} enquiry from ${name}`,
+      subject: `[Prime Tech Support] ${type} enquiry from ${name}`,
       html: `
         <div style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:32px;background:#f9f8f6;border-radius:12px;">
-          <h2 style="margin:0 0 4px;font-size:22px;color:#111;">New enquiry from your portfolio</h2>
+          <h2 style="margin:0 0 4px;font-size:22px;color:#111;">New enquiry — Prime Tech Support</h2>
           <p style="margin:0 0 24px;font-size:13px;color:#888;">${new Date().toUTCString()}</p>
 
           <table style="width:100%;border-collapse:collapse;font-size:14px;color:#444;">

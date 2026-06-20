@@ -577,6 +577,74 @@ function SolvedPascoMock() {
   )
 }
 
+function NextDoorMock() {
+  const gold = '#D4A24C'
+  const menuCats = ['Rice', 'Fufu', 'Banku', 'Yam', 'Plantain', 'Fish']
+
+  return (
+    <div className="aspect-[4/3] flex flex-col overflow-hidden relative">
+      <BrowserChrome url="nextdoor-de.com" />
+
+      {/* Full-bleed photo hero */}
+      <div className="relative flex-1 flex flex-col overflow-hidden">
+        {/* Simulated food photo backdrop */}
+        <div className="absolute inset-0" style={{
+          background: 'radial-gradient(circle at 50% 55%, #B5462A 0%, #7A2818 55%, #3A1208 100%)',
+        }} />
+        {/* Dark overlay for text legibility */}
+        <div className="absolute inset-0" style={{ background: 'rgba(20,8,4,0.42)' }} />
+
+        {/* Nav */}
+        <div className="relative z-10 flex items-center justify-between px-4 py-2.5 flex-shrink-0">
+          <div>
+            <p className="text-[8px] font-black tracking-[0.2em]" style={{ color: gold }}>NEXT DOOR</p>
+            <p className="text-[4.5px] italic text-white/70">Authentic African Cuisine · Essen</p>
+          </div>
+          <div className="flex items-center gap-2.5">
+            {['Home', 'Menu', 'Order', 'Contact'].map((n) => (
+              <span key={n} className="text-[5px] text-white/85">{n}</span>
+            ))}
+            <span className="text-[4.5px] text-white/50">EN | DE</span>
+            <button className="rounded-full px-2 py-0.5 text-[5px] font-bold text-[#1A1A1A]" style={{ background: gold }}>
+              Order Now
+            </button>
+          </div>
+        </div>
+
+        {/* Hero text — centered */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 gap-1.5">
+          <p className="text-[5.5px] font-semibold tracking-[0.22em]" style={{ color: gold }}>
+            STEELERSTR. 52 · ESSEN, GERMANY
+          </p>
+          <h2 className="text-[18px] font-black text-white leading-[1.05]">
+            The Taste of<br />Home
+          </h2>
+          <p className="text-[6px] text-white/80 max-w-[26ch] leading-relaxed mt-0.5">
+            Authentic Ghanaian &amp; West African cuisine, crafted with love in the heart of Essen.
+          </p>
+          <div className="flex items-center gap-2 mt-1.5">
+            <button className="rounded-full px-3 py-1 text-[6px] font-bold text-[#1A1A1A]" style={{ background: gold }}>
+              Explore Menu
+            </button>
+            <button className="rounded-full border border-white px-3 py-1 text-[6px] font-bold text-white">
+              Order via WhatsApp
+            </button>
+          </div>
+        </div>
+
+        {/* Menu category strip */}
+        <div className="relative z-10 flex items-center justify-center gap-1 px-4 pb-2.5 flex-wrap">
+          {menuCats.map((c) => (
+            <span key={c} className="rounded-full border border-white/25 px-1.5 py-0.5 text-[4.5px] font-medium text-white/75">
+              {c}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 /* ── ProjectCard ───────────────────────────────────────────────────── */
 
 type ProjectCardProps = {
@@ -686,6 +754,7 @@ function ProjectCard({
                 {thumbKind === 'motexiz'   && <MotexizMock />}
                 {thumbKind === 'tourghana'   && <TourGhanaMock />}
                 {thumbKind === 'solvedpasco' && <SolvedPascoMock />}
+                {thumbKind === 'nextdoor'    && <NextDoorMock />}
               </div>
             </a>
           </div>
@@ -746,11 +815,11 @@ export function Projects({
         <Reveal delay={80}>
           <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-[40px] md:text-[56px] font-bold tracking-tightest text-ink leading-[1.05]">
-              <ScrollText text="Things I've built." />
+              <ScrollText text="Things we've built." />
             </h2>
             <div className="flex flex-col gap-1">
               <p className="text-[15px] text-body max-w-[36ch]">
-                A handful of projects I'm proud to put my name on.
+                A handful of projects we're proud to put our name on.
               </p>
               {draggable && (
                 <p className="mt-1 flex items-center gap-1.5 text-[12px] text-body/50">

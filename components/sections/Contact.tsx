@@ -103,7 +103,7 @@ export function Contact() {
 
       setStatus('sent')
       setForm(EMPTY_FORM)
-      toast.success("Message sent — I'll be in touch soon!")
+      toast.success("Message sent — we'll be in touch soon!")
       setTimeout(() => setStatus('idle'), 4000)
     } catch {
       setStatus('error')
@@ -254,7 +254,7 @@ export function Contact() {
                 {/* Footer */}
                 <div className="mt-9 flex items-center justify-between gap-4">
                   <p className="text-[11.5px] text-white/40 max-w-[26ch]">
-                    I'll usually reply within a day with next steps.
+                    We'll usually reply within a day with next steps.
                   </p>
 
                   {status === 'idle' && (
@@ -273,7 +273,7 @@ export function Contact() {
                   )}
                   {status === 'sent' && (
                     <button disabled className="inline-flex items-center gap-2 rounded-full bg-[#5DC264]/20 border border-[#5DC264]/40 px-5 py-3 text-[14px] font-semibold text-[#5DC264] shrink-0">
-                      ✓ Sent — I'll be in touch soon
+                      ✓ Sent — we'll be in touch soon
                     </button>
                   )}
                   {status === 'error' && (

@@ -81,22 +81,22 @@ function CodeWindow() {
             <span className="h-2.5 w-2.5 rounded-full bg-[#F4BE3F]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#5DC264]" />
           </div>
-          <div className="text-[11px] font-mono text-body">~/daniel-sackitey/portfolio</div>
+          <div className="text-[11px] font-mono text-body">~/prime-tech-support/website</div>
           <div className="w-10" />
         </div>
         {/* Code body */}
         <div className="px-5 md:px-6 py-6 font-mono text-[12.5px] leading-[1.85] text-ink/85">
           <CodeLine n={1}>
-            <span className="text-[#9B8FAF]">{'// hello.ts'}</span>
+            <span className="text-[#9B8FAF]">{'// about.ts'}</span>
           </CodeLine>
           <CodeLine n={2}>
-            <span className="text-[#C24A0F]">const</span>{' developer = {'}
+            <span className="text-[#C24A0F]">const</span>{' studio = {'}
           </CodeLine>
           <CodeLine n={3} indent={1}>
-            {'name: '}<span className="text-[#5DC264]">'Daniel'</span>,
+            {'name: '}<span className="text-[#5DC264]">'Prime Tech Support'</span>,
           </CodeLine>
           <CodeLine n={4} indent={1}>
-            {'role: '}<span className="text-[#5DC264]">'Full-Stack Developer'</span>,
+            {'founder: '}<span className="text-[#5DC264]">'Daniel'</span>,
           </CodeLine>
           <CodeLine n={5} indent={1}>
             {'location: '}<span className="text-[#5DC264]">'Accra, Ghana 🇬🇭'</span>,
@@ -113,7 +113,7 @@ function CodeWindow() {
           <CodeLine n={9}>{'};'}</CodeLine>
           <CodeLine n={10}>&nbsp;</CodeLine>
           <CodeLine n={11}>
-            {'> ship(developer);'}<span className="caret text-burnt ml-1">▍</span>
+            {'> ship(studio);'}<span className="caret text-burnt ml-1">▍</span>
           </CodeLine>
         </div>
         {/* Status bar */}
@@ -225,12 +225,12 @@ export function Hero() {
                 <span className="relative flex h-2 w-2">
                   <span className="pulse-dot h-full w-full rounded-full bg-burnt" />
                 </span>
-                Available for freelance
+                Available for new projects
               </div>
             </Reveal>
             <Reveal delay={80}>
               <h1 className="mt-7 text-[44px] leading-[1.02] sm:text-[56px] md:text-[68px] lg:text-[84px] font-bold tracking-tightest text-ink">
-                Full-Stack Developer.
+                Web development studio.
                 <span className="block">
                   Websites that <CyclingWord words={ROTATING_VERBS} />
                 </span>
@@ -238,7 +238,7 @@ export function Hero() {
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-7 max-w-xl text-[17px] md:text-[18px] leading-[1.7] text-body">
-                I'm Daniel — I build fast, modern web products for businesses and startups. Based in Accra, Ghana.
+                We're Prime Tech Support — founded by Daniel, building fast, modern web products for businesses and startups. Based in Accra, Ghana.
               </p>
             </Reveal>
             <Reveal delay={240}>
@@ -248,7 +248,7 @@ export function Hero() {
                   onClick={scrollTo('work')}
                   className="group inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-burnt text-white text-[14px] font-semibold px-5 py-3 hover:bg-burnt-dark transition-colors"
                 >
-                  View My Work
+                  View Our Work
                   <IconArrowRight
                     size={16}
                     stroke={2}

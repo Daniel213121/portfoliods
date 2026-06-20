@@ -6,7 +6,7 @@ export type Project = {
   domain: string;
   description: string;
   tags: string[];
-  thumbKind: 'opal' | 'kurom' | 'mina' | 'motexiz' | 'tourghana' | 'chezkeke' | 'solvedpasco';
+  thumbKind: 'opal' | 'kurom' | 'mina' | 'motexiz' | 'tourghana' | 'chezkeke' | 'solvedpasco' | 'nextdoor';
 };
 
 export const PROJECTS: Project[] = [
@@ -80,6 +80,16 @@ export const PROJECTS: Project[] = [
     tags: ['Next.js', 'TypeScript', 'EdTech', 'SaaS', 'Client Work'],
     thumbKind: 'solvedpasco',
   },
+  {
+    num: '08',
+    name: 'Next Door',
+    featured: false,
+    url: 'https://www.nextdoor-de.com',
+    domain: 'nextdoor-de.com',
+    description: 'Bilingual restaurant site for an authentic Ghanaian & West African kitchen in Essen, Germany — full menu, WhatsApp ordering, table reservations, and a German/English language switch.',
+    tags: ['Next.js', 'TypeScript', 'Restaurant', 'Bilingual', 'Client Work'],
+    thumbKind: 'nextdoor',
+  },
 ];
 
 export type Service = {
@@ -105,7 +115,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-  { value: '7+',    label: 'Projects Shipped'  },
+  { value: '8+',    label: 'Projects Shipped'  },
   { value: '5+',    label: 'Industries Served' },
   { value: '100%',  label: 'Built to Convert'  },
   { value: 'GH 🇬🇭', label: 'Based in Accra'  },
@@ -147,6 +157,13 @@ export const TIMELINE = [
     title: 'Motexiz',
     sub: 'Shipped',
     body: 'Car rental platform with premium fleet listings, free delivery, and GHS450/day starting price.',
+    chip: 'Launched',
+  },
+  {
+    year: '2026',
+    title: 'Next Door',
+    sub: 'Shipped',
+    body: 'Bilingual restaurant site for a Ghanaian & West African kitchen in Essen, Germany, with full menu and WhatsApp ordering.',
     chip: 'Launched',
   },
   {

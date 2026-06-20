@@ -4,12 +4,12 @@ import { Toaster } from 'sonner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Daniel  — Full-Stack Developer',
+  title: 'Prime Tech Support — Web Development Studio',
   description:
-    'Full-stack developer and founder of Prime Tech Support, building fast, conversion-driven web products from Accra, Ghana.',
+    'Prime Tech Support is a web development studio founded by Daniel, building fast, conversion-driven web products from Accra, Ghana.',
   openGraph: {
-    title: 'Daniel  — Full-Stack Developer',
-    description: 'Fast, modern web products for businesses and startups.',
+    title: 'Prime Tech Support — Web Development Studio',
+    description: 'Fast, modern web products for businesses and startups, founded by Daniel.',
     locale: 'en_US',
     type: 'website',
   },

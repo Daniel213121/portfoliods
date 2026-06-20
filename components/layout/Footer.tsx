@@ -7,9 +7,9 @@ export function Footer() {
 
             {/* Left: name + studio */}
             <div className="text-[12.5px] text-white/55">
-              <span className="font-semibold text-white/85">Daniel</span>
+              <span className="font-semibold text-white/85">Prime Tech Support</span>
               <span className="mx-2 text-white/25">·</span>
-              <span>Prime Tech Support</span>
+              <span>Founded by Daniel</span>
             </div>
 
             {/* Center: tagline */}

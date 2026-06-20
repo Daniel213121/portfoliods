@@ -37,7 +37,7 @@ export function Navbar() {
           onClick={handleNav('top')}
           className="text-[15px] md:text-[16px] font-bold tracking-tight text-ink"
         >
-          Daniel<span className="text-burnt">.</span>
+          Prime Tech<span className="text-burnt"> Support</span>
         </a>
 
         {/* Desktop nav */}
@@ -69,7 +69,7 @@ export function Navbar() {
             onClick={handleNav('contact')}
             className="hidden md:inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-burnt text-white text-[13px] font-semibold px-4 py-2 hover:bg-burnt-dark transition-colors"
           >
-            Hire Me
+            Work With Us
             <IconArrowRight size={14} stroke={2} />
           </a>
           <button
@@ -105,7 +105,7 @@ export function Navbar() {
             onClick={handleNav('contact')}
             className="mt-4 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-burnt text-white text-[14px] font-semibold px-4 py-3"
           >
-            Hire Me <IconArrowRight size={14} stroke={2} />
+            Work With Us <IconArrowRight size={14} stroke={2} />
           </a>
         </nav>
       </div>
