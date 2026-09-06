@@ -122,7 +122,7 @@ export function Contact() {
       />
 
       <div className="relative mx-auto max-w-[1280px] px-6 md:px-10 lg:px-14 py-24 md:py-32">
-        <Reveal><SectionLabel>Let's Talk</SectionLabel></Reveal>
+        <Reveal><SectionLabel>Let&apos;s Talk</SectionLabel></Reveal>
 
         <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
@@ -137,7 +137,7 @@ export function Contact() {
 
             <Reveal delay={160}>
               <p className="mt-6 text-[18px] md:text-[20px] leading-[1.55] text-white/70 max-w-md">
-                Let's build something{' '}
+                Let&apos;s build something{' '}
                 <span className="italic font-serif text-burnt">great</span> together.
               </p>
             </Reveal>
@@ -254,7 +254,7 @@ export function Contact() {
                 {/* Footer */}
                 <div className="mt-9 flex items-center justify-between gap-4">
                   <p className="text-[11.5px] text-white/40 max-w-[26ch]">
-                    We'll usually reply within a day with next steps.
+                    We&apos;ll usually reply within a day with next steps.
                   </p>
 
                   {status === 'idle' && (
@@ -273,7 +273,7 @@ export function Contact() {
                   )}
                   {status === 'sent' && (
                     <button disabled className="inline-flex items-center gap-2 rounded-full bg-[#5DC264]/20 border border-[#5DC264]/40 px-5 py-3 text-[14px] font-semibold text-[#5DC264] shrink-0">
-                      ✓ Sent — we'll be in touch soon
+                      ✓ Sent — we&apos;ll be in touch soon
                     </button>
                   )}
                   {status === 'error' && (

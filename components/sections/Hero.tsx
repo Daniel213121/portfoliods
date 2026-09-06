@@ -19,7 +19,6 @@ function CyclingWord({ words }: { words: string[] }) {
       }, 380)
     }, 2600)
     return () => clearInterval(id)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [words.length])
 
   const longest = words.reduce((a, b) => (a.length > b.length ? a : b))
@@ -93,19 +92,19 @@ function CodeWindow() {
             <span className="text-[#C24A0F]">const</span>{' studio = {'}
           </CodeLine>
           <CodeLine n={3} indent={1}>
-            {'name: '}<span className="text-[#5DC264]">'Prime Tech Support'</span>,
+            {'name: '}<span className="text-[#5DC264]">&apos;Prime Tech Support&apos;</span>,
           </CodeLine>
           <CodeLine n={4} indent={1}>
-            {'founder: '}<span className="text-[#5DC264]">'Daniel'</span>,
+            {'founder: '}<span className="text-[#5DC264]">&apos;Daniel&apos;</span>,
           </CodeLine>
           <CodeLine n={5} indent={1}>
-            {'location: '}<span className="text-[#5DC264]">'Accra, Ghana 🇬🇭'</span>,
+            {'location: '}<span className="text-[#5DC264]">&apos;Accra, Ghana 🇬🇭&apos;</span>,
           </CodeLine>
           <CodeLine n={6} indent={1}>
-            {'stack: ['}<span className="text-[#5DC264]">'Next.js'</span>{", 'TS', 'Node'],"}
+            {'stack: ['}<span className="text-[#5DC264]">&apos;Next.js&apos;</span>{", 'TS', 'Node'],"}
           </CodeLine>
           <CodeLine n={7} indent={1}>
-            {'mission: '}<span className="text-burnt font-semibold">'Websites that convert.'</span>,
+            {'mission: '}<span className="text-burnt font-semibold">&apos;Websites that convert.&apos;</span>,
           </CodeLine>
           <CodeLine n={8} indent={1}>
             {'available: '}<span className="text-[#C24A0F]">true</span>,
@@ -238,7 +237,7 @@ export function Hero() {
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-7 max-w-xl text-[17px] md:text-[18px] leading-[1.7] text-body">
-                We're Prime Tech Support — founded by Daniel, building fast, modern web products for businesses and startups. Based in Accra, Ghana.
+                We&apos;re Prime Tech Support — founded by Daniel, building fast, modern web products for businesses and startups. Based in Accra, Ghana.
               </p>
             </Reveal>
             <Reveal delay={240}>

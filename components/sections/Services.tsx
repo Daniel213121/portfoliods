@@ -88,9 +88,11 @@ function ServiceHorizontal({ iconMap }: { iconMap: Record<string, React.Componen
     setProgress(max > 0 ? el.scrollLeft / max : 0)
   }
 
-  const nudge = (dir: number) => () => {
-    trackRef.current?.scrollBy({
-      left: dir * (trackRef.current.clientWidth * 0.8),
+  const nudge = (dir: number) => {
+    const el = trackRef.current
+    if (!el) return
+    el.scrollBy({
+      left: dir * (el.clientWidth * 0.8),
       behavior: 'smooth',
     })
   }
@@ -129,7 +131,7 @@ function ServiceHorizontal({ iconMap }: { iconMap: Record<string, React.Componen
         <button
           type="button"
           aria-label="Previous"
-          onClick={nudge(-1)}
+          onClick={() => nudge(-1)}
           className="rounded-full border border-line h-10 w-10 flex items-center justify-center hover:border-burnt hover:text-burnt transition-colors shrink-0"
         >
           <IconArrowRight size={16} className="rotate-180" />
@@ -137,7 +139,7 @@ function ServiceHorizontal({ iconMap }: { iconMap: Record<string, React.Componen
         <button
           type="button"
           aria-label="Next"
-          onClick={nudge(1)}
+          onClick={() => nudge(1)}
           className="rounded-full border border-line h-10 w-10 flex items-center justify-center hover:border-burnt hover:text-burnt transition-colors shrink-0"
         >
           <IconArrowRight size={16} />
@@ -203,7 +205,7 @@ export function Services({ horizontal = false }: { horizontal?: boolean }) {
               <div>
                 <p className="text-[14px] text-body">Not sure which one you need?</p>
                 <p className="mt-1 text-[18px] md:text-[22px] font-bold text-ink">
-                  Let's scope it together — first call is on us.
+                  Let&apos;s scope it together — first call is on us.
                 </p>
               </div>
               <a

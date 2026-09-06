@@ -101,7 +101,7 @@ export function About() {
                 <div className="relative">
                   <div className="absolute -left-3 top-1 bottom-1 w-px bg-burnt/60 hidden md:block" />
                   <p className="text-[16px] md:text-[17px] leading-[1.75] text-body">
-                    I'm Daniel, founder of{' '}
+                    I&apos;m Daniel, founder of{' '}
                     <span className="text-ink font-semibold">Prime Tech Support</span>
                     {' '}— a web development studio in Accra building modern
                     web products for businesses across Ghana and beyond.
@@ -135,7 +135,7 @@ export function About() {
                   </div>
                   {/* Quote */}
                   <p className="mt-4 text-[14px] leading-[1.65] text-body italic font-serif">
-                    "If it doesn't convert, it doesn't ship."
+                    &quot;If it doesn&apos;t convert, it doesn&apos;t ship.&quot;
                   </p>
                 </div>
               </Reveal>
