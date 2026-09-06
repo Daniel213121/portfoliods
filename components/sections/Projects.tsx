@@ -96,7 +96,7 @@ function OpalMock() {
           <div className="flex items-center gap-1.5">
             <span className="h-1 w-1 rounded-full bg-[#2B4A2E]" />
             <span className="text-[5.5px] font-semibold tracking-[0.18em] uppercase" style={{ color: '#2B4A2E' }}>
-              NEW SEASON EDIT · SPRING '26
+              NEW SEASON EDIT · SPRING &apos;26
             </span>
           </div>
 
@@ -176,11 +176,11 @@ function KuromMock() {
 
           <div>
             <p className="text-[13px] font-bold leading-tight" style={{ color: '#2A2A2A' }}>
-              Gadgets you'll{' '}
+              Gadgets you&apos;ll{' '}
               <span style={{ color: '#3CB043' }}>love.</span>
             </p>
             <p className="text-[13px] font-bold leading-tight" style={{ color: '#2A2A2A' }}>
-              Prices you'll{' '}
+              Prices you&apos;ll{' '}
               <span style={{ color: '#3CB043' }}>trust.</span>
             </p>
             <p className="text-[6px] mt-1" style={{ color: '#555' }}>Starts from</p>
@@ -252,7 +252,7 @@ function MinaMock() {
           </svg>
           <div>
             <span className="text-[7.5px] font-bold" style={{ color: navy }}>
-              Mina's <span style={{ color: blue }}>Haus</span>
+              Mina&apos;s <span style={{ color: blue }}>Haus</span>
             </span>
             <div className="text-[4.5px] tracking-[0.12em]" style={{ color: '#5A7A9A' }}>CLEAN · CARE · CONNECT</div>
           </div>
@@ -386,7 +386,7 @@ function MotexizMock() {
 
           <div>
             <p className="text-[12px] font-black leading-tight" style={{ color: '#1A1A1A' }}>
-              Dream Cars for<br />Rent. Prices You'll<br />Love.
+              Dream Cars for<br />Rent. Prices You&apos;ll<br />Love.
             </p>
             <p className="text-[6px] mt-1.5" style={{ color: '#555' }}>Starting from</p>
             <p className="text-[11px] font-black" style={{ color: red }}>GHS450/day</p>
@@ -645,6 +645,121 @@ function NextDoorMock() {
   )
 }
 
+function SellersShopMock() {
+  const violet = '#6D3BE8'
+  const orange = '#E8620F'
+  const cats = ['Deals', 'Phones & Tablets', 'Laptops', 'TVs', 'Audio', 'Gaming', 'Cameras', 'Appliances', 'Wearables']
+
+  return (
+    <div className="aspect-[4/3] bg-white flex flex-col overflow-hidden">
+      <BrowserChrome url="thesellersshop.com" />
+
+      {/* Announcement bar */}
+      <div className="flex items-center justify-center px-3 py-1 flex-shrink-0" style={{
+        background: 'linear-gradient(90deg, #1B5CF0 0%, #2B2F6B 100%)',
+      }}>
+        <span className="text-[5px] font-bold tracking-[0.14em] text-white">
+          GENUINE PHONES, LAPTOPS &amp; GADGETS — DELIVERED FAST ACROSS ACCRA
+        </span>
+      </div>
+
+      {/* Header */}
+      <div className="flex items-center gap-3 px-4 py-2 flex-shrink-0">
+        <div className="flex items-center gap-1.5">
+          <div className="h-3.5 w-3.5 rounded-full border flex items-center justify-center" style={{ borderColor: '#1A1A1A' }}>
+            <span className="text-[5px] font-serif italic" style={{ color: '#1A1A1A' }}>S</span>
+          </div>
+          <span className="text-[8px] font-bold tracking-tight" style={{ color: '#1A1A1A' }}>The Sellers Shop</span>
+        </div>
+
+        {/* Search pill */}
+        <div className="flex flex-1 items-center gap-1.5 rounded-full px-2.5 py-1" style={{ background: '#F1F2F4' }}>
+          <svg width="5" height="5" viewBox="0 0 16 16" fill="none" stroke="#8A8F98" strokeWidth="2">
+            <circle cx="7" cy="7" r="5" /><path d="M11 11l4 4" />
+          </svg>
+          <span className="text-[5px]" style={{ color: '#8A8F98' }}>Search phones, laptops, audio…</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          {['About Us', 'Wishlist', 'Cart'].map((n) => (
+            <span key={n} className="text-[5px] font-medium" style={{ color: '#2A2A2A' }}>{n}</span>
+          ))}
+          <span className="rounded-full px-2.5 py-0.5 text-[5px] font-bold text-white" style={{ background: violet }}>
+            Login
+          </span>
+        </div>
+      </div>
+
+      {/* Category nav */}
+      <div className="flex items-center gap-2.5 border-y px-4 py-1.5 flex-shrink-0" style={{ borderColor: '#EAEBEE' }}>
+        {cats.map((c, i) => (
+          <span
+            key={c}
+            className="text-[5px] whitespace-nowrap"
+            style={{ color: i === 0 ? orange : '#3A3A3A', fontWeight: i === 0 ? 700 : 500 }}
+          >
+            {c}
+          </span>
+        ))}
+      </div>
+
+      {/* Hero grid */}
+      <div className="flex-1 grid grid-cols-2 gap-2 p-2.5 overflow-hidden">
+        {/* iPhone Air */}
+        <div className="rounded-lg p-3 flex flex-col justify-between overflow-hidden" style={{ background: '#EDF0F3' }}>
+          <div>
+            <p className="text-[4.5px] font-semibold tracking-[0.16em]" style={{ color: '#6B7280' }}>NEW</p>
+            <p className="mt-0.5 text-[11px] font-bold leading-none" style={{ color: '#111' }}>iPhone Air</p>
+            <span className="mt-1.5 inline-block rounded-full border px-2 py-0.5 text-[5px] font-semibold" style={{ borderColor: '#111', color: '#111' }}>
+              Shop now
+            </span>
+          </div>
+          {/* Phone lineup */}
+          <div className="flex items-end justify-end gap-[3px] pr-1">
+            {['#BFD3E6', '#EDE6D6', '#F2F2F0', '#3A3A3C'].map((c, i) => (
+              <div key={i} className="rounded-[2px] border" style={{ background: c, borderColor: 'rgba(0,0,0,0.12)', width: 11, height: 26 + i }} />
+            ))}
+          </div>
+        </div>
+
+        {/* PS5 Pro */}
+        <div className="rounded-lg p-3 flex flex-col justify-between overflow-hidden" style={{ background: '#EDF0F3' }}>
+          <div>
+            <p className="text-[4.5px] font-semibold tracking-[0.16em]" style={{ color: '#6B7280' }}>ALL NEW</p>
+            <p className="mt-0.5 text-[11px] font-bold leading-none" style={{ color: '#111' }}>PlayStation 5 Pro</p>
+            <p className="mt-0.5 text-[5px]" style={{ color: '#6B7280' }}>Available now</p>
+            <span className="mt-1.5 inline-block rounded-full border px-2 py-0.5 text-[5px] font-semibold" style={{ borderColor: '#111', color: '#111' }}>
+              Shop now
+            </span>
+          </div>
+          <div className="flex items-end justify-end pr-1">
+            <div className="rounded-[2px] border overflow-hidden" style={{ width: 34, height: 28, background: '#1A2A5E', borderColor: 'rgba(0,0,0,0.15)' }}>
+              <div className="h-1/5 w-full" style={{ background: '#2B4CA8' }} />
+              <div className="flex h-4/5 items-center justify-center">
+                <span className="text-[5px] font-bold tracking-tight text-white/85">PS5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Smart & Wearables */}
+        <div className="rounded-lg px-3 py-2 flex flex-col justify-center overflow-hidden" style={{ background: '#F8CE9E' }}>
+          <p className="text-[8px] font-bold leading-[1.1]" style={{ color: '#1A1A1A' }}>Smart &amp;<br />Wearables</p>
+          <p className="mt-0.5 text-[5px]" style={{ color: '#4A4A4A' }}>Watches and bands</p>
+          <p className="mt-1 text-[5px] font-semibold" style={{ color: '#1A1A1A' }}>View more →</p>
+        </div>
+
+        {/* Phones & Tablets */}
+        <div className="rounded-lg px-3 py-2 flex flex-col justify-center overflow-hidden" style={{ background: '#BCD4F2' }}>
+          <p className="text-[8px] font-bold leading-[1.1]" style={{ color: '#1A1A1A' }}>Phones &amp;<br />Tablets</p>
+          <p className="mt-0.5 text-[5px]" style={{ color: '#4A4A4A' }}>iPads, iPhones &amp; more</p>
+          <p className="mt-1 text-[5px] font-semibold" style={{ color: '#1A1A1A' }}>View more →</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 /* ── ProjectCard ───────────────────────────────────────────────────── */
 
 type ProjectCardProps = {
@@ -755,6 +870,7 @@ function ProjectCard({
                 {thumbKind === 'tourghana'   && <TourGhanaMock />}
                 {thumbKind === 'solvedpasco' && <SolvedPascoMock />}
                 {thumbKind === 'nextdoor'    && <NextDoorMock />}
+                {thumbKind === 'sellersshop' && <SellersShopMock />}
               </div>
             </a>
           </div>
@@ -819,7 +935,7 @@ export function Projects({
             </h2>
             <div className="flex flex-col gap-1">
               <p className="text-[15px] text-body max-w-[36ch]">
-                A handful of projects we're proud to put our name on.
+                A handful of projects we&apos;re proud to put our name on.
               </p>
               {draggable && (
                 <p className="mt-1 flex items-center gap-1.5 text-[12px] text-body/50">

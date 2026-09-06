@@ -6,29 +6,29 @@ export type Project = {
   domain: string;
   description: string;
   tags: string[];
-  thumbKind: 'opal' | 'kurom' | 'mina' | 'motexiz' | 'tourghana' | 'chezkeke' | 'solvedpasco' | 'nextdoor';
+  thumbKind: 'opal' | 'kurom' | 'mina' | 'motexiz' | 'tourghana' | 'chezkeke' | 'solvedpasco' | 'nextdoor' | 'sellersshop';
 };
 
 export const PROJECTS: Project[] = [
   {
     num: '01',
-    name: 'Opal Edge Wellness',
-    featured: true,
-    url: 'https://opaledgewellness.vercel.app',
-    domain: 'opaledgewellness.vercel.app',
-    description: 'International skincare e-commerce store. Full customer portal, wishlist, cart, admin dashboard, and 12 product categories with 240+ products.',
-    tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'E-commerce'],
-    thumbKind: 'opal',
+    name: 'The Sellers Shop',
+    featured: false,
+    url: 'https://www.thesellersshop.com',
+    domain: 'thesellersshop.com',
+    description: 'Consumer electronics marketplace for Accra — phones, laptops, TVs, gaming, and wearables across 9 categories, with search, wishlist, cart, and customer accounts.',
+    tags: ['Next.js', 'TypeScript', 'E-commerce', 'Client Work'],
+    thumbKind: 'sellersshop',
   },
   {
     num: '02',
-    name: 'Kurom',
+    name: 'Next Door',
     featured: false,
-    url: 'https://kurom.vercel.app',
-    domain: 'kurom.vercel.app',
-    description: 'Gadget e-commerce store with product listings, cart, newsletter, and subscription pricing plans.',
-    tags: ['Next.js', 'React', 'E-commerce'],
-    thumbKind: 'kurom',
+    url: 'https://www.nextdoor-de.com',
+    domain: 'nextdoor-de.com',
+    description: 'Bilingual restaurant site for an authentic Ghanaian & West African kitchen in Essen, Germany — full menu, WhatsApp ordering, table reservations, and a German/English language switch.',
+    tags: ['Next.js', 'TypeScript', 'Restaurant', 'Bilingual', 'Client Work'],
+    thumbKind: 'nextdoor',
   },
   {
     num: '03',
@@ -42,36 +42,6 @@ export const PROJECTS: Project[] = [
   },
   {
     num: '04',
-    name: 'Motexiz',
-    featured: false,
-    url: 'https://motexiz.vercel.app',
-    domain: 'motexiz.vercel.app',
-    description: 'Trusted car rental platform with a curated vehicle inventory and a smooth browse-to-book customer experience.',
-    tags: ['Next.js', 'Tailwind CSS', 'Car Rental'],
-    thumbKind: 'motexiz',
-  },
-  {
-    num: '05',
-    name: 'Tour Ghana',
-    featured: false,
-    url: 'https://tourghana-alpha.vercel.app',
-    domain: 'tourghana-alpha.vercel.app',
-    description: 'Ghana tourism platform showcasing curated destinations, six tour categories — cultural, adventure, safari, coastal, historical, and festivals — with package booking.',
-    tags: ['Next.js', 'Tailwind CSS', 'Tourism', 'Booking Platform'],
-    thumbKind: 'tourghana',
-  },
-  {
-    num: '06',
-    name: 'Chez Keke POS',
-    featured: false,
-    url: 'https://chezkeke.vercel.app',
-    domain: 'chezkeke.vercel.app',
-    description: 'Restaurant POS built for an Ivorian–Ghanaian kitchen. Features a live ticket dashboard, categorised menu catalog, basket session ordering, and an admin panel covering orders, sales reports, and user management. WiFi-gated: the order number becomes the table\'s WiFi password on purchase.',
-    tags: ['Next.js', 'TypeScript', 'POS System', 'Real-time', 'Client Work'],
-    thumbKind: 'chezkeke',
-  },
-  {
-    num: '07',
     name: 'SolvedPasco',
     featured: false,
     url: 'https://solvedpasco.com',
@@ -81,14 +51,54 @@ export const PROJECTS: Project[] = [
     thumbKind: 'solvedpasco',
   },
   {
-    num: '08',
-    name: 'Next Door',
+    num: '05',
+    name: 'Opal Edge Wellness',
+    featured: true,
+    url: 'https://opaledgewellness.vercel.app',
+    domain: 'opaledgewellness.vercel.app',
+    description: 'International skincare e-commerce store. Full customer portal, wishlist, cart, admin dashboard, and 12 product categories with 240+ products.',
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'E-commerce'],
+    thumbKind: 'opal',
+  },
+  {
+    num: '06',
+    name: 'Kurom',
     featured: false,
-    url: 'https://www.nextdoor-de.com',
-    domain: 'nextdoor-de.com',
-    description: 'Bilingual restaurant site for an authentic Ghanaian & West African kitchen in Essen, Germany — full menu, WhatsApp ordering, table reservations, and a German/English language switch.',
-    tags: ['Next.js', 'TypeScript', 'Restaurant', 'Bilingual', 'Client Work'],
-    thumbKind: 'nextdoor',
+    url: 'https://kurom.vercel.app',
+    domain: 'kurom.vercel.app',
+    description: 'Gadget e-commerce store with product listings, cart, newsletter, and subscription pricing plans.',
+    tags: ['Next.js', 'React', 'E-commerce'],
+    thumbKind: 'kurom',
+  },
+  {
+    num: '07',
+    name: 'Motexiz',
+    featured: false,
+    url: 'https://motexiz.vercel.app',
+    domain: 'motexiz.vercel.app',
+    description: 'Trusted car rental platform with a curated vehicle inventory and a smooth browse-to-book customer experience.',
+    tags: ['Next.js', 'Tailwind CSS', 'Car Rental'],
+    thumbKind: 'motexiz',
+  },
+  {
+    num: '08',
+    name: 'Tour Ghana',
+    featured: false,
+    url: 'https://tourghana-alpha.vercel.app',
+    domain: 'tourghana-alpha.vercel.app',
+    description: 'Ghana tourism platform showcasing curated destinations, six tour categories — cultural, adventure, safari, coastal, historical, and festivals — with package booking.',
+    tags: ['Next.js', 'Tailwind CSS', 'Tourism', 'Booking Platform'],
+    thumbKind: 'tourghana',
+  },
+  {
+    num: '09',
+    name: 'Chez Keke POS',
+    featured: false,
+    url: 'https://chezkeke.vercel.app',
+    domain: 'chezkeke.vercel.app',
+    description: 'Restaurant POS built for an Ivorian–Ghanaian kitchen. Features a live ticket dashboard, categorised menu catalog, basket session ordering, and an admin panel covering orders, sales reports, and user management. WiFi-gated: the order number becomes the table\'s WiFi password on purchase.',
+    tags: ['Next.js', 'TypeScript', 'POS System', 'Real-time', 'Client Work'],
+    thumbKind: 'chezkeke',
   },
 ];
 
@@ -115,7 +125,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-  { value: '8+',    label: 'Projects Shipped'  },
+  { value: '9+',    label: 'Projects Shipped'  },
   { value: '5+',    label: 'Industries Served' },
   { value: '100%',  label: 'Built to Convert'  },
   { value: 'GH 🇬🇭', label: 'Based in Accra'  },
@@ -131,6 +141,13 @@ export const STACK = [
 ];
 
 export const TIMELINE = [
+  {
+    year: '2026',
+    title: 'The Sellers Shop',
+    sub: 'Shipped',
+    body: 'Consumer electronics marketplace for Accra with 9 product categories, wishlist, cart, and customer accounts.',
+    chip: 'Launched',
+  },
   {
     year: '2026',
     title: "Mina's Haus",
